@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+// question 5
 int add_ok ( int x, int y )
 {
     int result = x + y;
