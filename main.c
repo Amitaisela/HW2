@@ -3,15 +3,7 @@
 
 unsigned float_neg(unsigned uf);
 
-// question 5
-int add_ok(int x, int y) {
-    int result = x + y;
-    if (x >= 0 && y >= 0 && result < 0) // Positive overflow
-        return -1;
-    if (x < 0 && y < 0 && result > 0) // Negative overflow
-        return -2;
-    return 1; // No overflow
-}
+
 
 // question 4
 unsigned float_neg(unsigned uf) {
@@ -22,6 +14,16 @@ unsigned float_neg(unsigned uf) {
 
     return uf ^ (1 << 31);
 
+}
+
+// question 5
+int add_ok(int x, int y) {
+    int result = x + y;
+    if (x >= 0 && y >= 0 && result < 0) // Positive overflow
+        return -1;
+    if (x < 0 && y < 0 && result > 0) // Negative overflow
+        return -2;
+    return 1; // No overflow
 }
 
 int main() {
